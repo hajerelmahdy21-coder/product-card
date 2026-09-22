@@ -1,0 +1,161 @@
+:root {
+    --button-c-hover-: hsl(158, 42%, 18%);
+    --button-c-: hsl(158, 36%, 37%);
+    --primary-font-c-: hsl(212, 21%, 14%);
+    --secondry-font-c-: hsl(228, 12%, 48%);
+    --bg-color-: hsl(30, 38%, 92%);
+    --card-color-: hsl(0, 0%, 100%);
+    --font-size-p: 14px;
+    --font-weight-p: 500;
+    --font-weight-primary: 700;
+    --font-family-body-: "Montserrat", sans-serif;
+    --font-family-primary-: "Fraunces", serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color-);
+    font-family: var(--font-family-body-);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.card {
+    max-width: 350px;
+    background-color: var(--card-color-);
+    box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.3) ;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.card picture {
+    display: block;
+    width: 100%;
+}
+
+.img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.parfume {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.product-description ,
+.parfume ,
+.price::after {
+    color: var(--secondry-font-c-);
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-p);
+}
+
+.card-title {
+    text-transform: capitalize;
+    font-family: var(--font-family-primary-);
+    font-weight: var(--font-weight-primary);
+    line-height: 1;
+    color: var(--primary-font-c-);
+}
+
+.price {
+    color: var(--button-c-);
+    font-family: var(--font-family-primary-);
+    position: relative;
+    font-size: 32px;
+}
+
+.price::after {
+    content: "$169.99";
+    position: absolute;
+    text-decoration: line-through;
+    margin-left: 20px;
+    font-family: var(--font-family-primary-);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.add-to-car {
+    background-color: var(--button-c-);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.add-to-car::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./icon-cart.svg) ;
+    width: 15px;
+    height: 15px;
+    margin-right: 20px;
+}
+
+.add-to-car:hover {
+    background-color: var(--button-c-hover-);
+}
+
+@media (min-width: 1440px) {
+.card {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+}
+.card picture{
+    width: 50%;
+}
+.img-card {
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+.card-content {
+    width: 50%;
+    padding: 30px; 
+    justify-content: space-between;
+    margin: 0;
+}
+}
