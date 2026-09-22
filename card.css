@@ -136,7 +136,7 @@ body {
     background-color: var(--button-c-hover-);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
 .card {
     display: flex;
     flex-direction: row;
